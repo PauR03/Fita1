@@ -154,17 +154,23 @@ for($i = 0;$i < $filas; $i++){
         }
         if($i == 0 && $j >= 1){
 
+            $background = "grey";
             $salida = $j;
         }
         else if ($i >= 1 && $j == 0){
 
+            $background = "grey";
             $salida = chr(65+$i-1);
         }
         else if($confirmante){
+            $background = "blue";
             $salida = "";
         }
+        else{
+            $background = "green";
+        }
         /*********************/
-        echo "      <td style='border: black solid 1px; width: 20px; text-align: center;'>$salida</td>\n";
+        echo "      <td style='border: black solid 1px; width: 20px; text-align: center; background-color:$background;'>$salida</td>\n";
         
     }
     echo "  </tr>\n";
